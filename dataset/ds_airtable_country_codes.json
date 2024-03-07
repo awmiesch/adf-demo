@@ -5,16 +5,6 @@
 			"referenceName": "ls_airtable_api",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"base_id": {
-				"type": "String",
-				"defaultValue": "app37qLBTI0RQvW9y"
-			},
-			"table_id": {
-				"type": "String",
-				"defaultValue": "tbl143cu7ktWAeHMF"
-			}
-		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
