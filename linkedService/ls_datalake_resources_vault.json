@@ -1,0 +1,10 @@
+{
+	"name": "ls_datalake_resources_vault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://datalake-resources-vault.vault.azure.net/"
+		}
+	}
+}
