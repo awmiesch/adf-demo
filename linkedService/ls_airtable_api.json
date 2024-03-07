@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF",
+			"url": "https://api.airtable.com/v0",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Basic",
 			"userName": "awmiesch@outlook.com",
