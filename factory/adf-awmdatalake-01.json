@@ -1,0 +1,9 @@
+{
+	"name": "adf-awmdatalake-01",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e6660846-31d1-490b-9cf3-d1aa203e7015",
+		"tenantId": "4445a8c2-c6a3-4e94-8268-2bcf3cff1cc3"
+	}
+}
