@@ -1,0 +1,10 @@
+{
+	"name": "adl_keyvault_airtable_token",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://adl-keyvault.vault.azure.net/"
+		}
+	}
+}
