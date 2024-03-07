@@ -1,0 +1,21 @@
+{
+	"name": "ls_airtable_api",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.airtable.com/v0",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "awmiesch@outlook.com",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_datalake_resources_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "airtable-api-token"
+			}
+		}
+	}
+}
