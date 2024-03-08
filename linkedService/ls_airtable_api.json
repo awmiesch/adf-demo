@@ -15,6 +15,16 @@
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "airtable-password"
+			},
+			"authHeaders": {
+				"Authentication": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "ls_datalake_resources_vault",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "airtable-api-token"
+				}
 			}
 		}
 	},
