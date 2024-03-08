@@ -17,7 +17,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@dataset().country_codes_file_name",
+					"value": "@concat('country_codes_', formatDateTime(utcnow(), 'yyyy-dd-MM'))",
 					"type": "Expression"
 				},
 				"container": "datafiles"
