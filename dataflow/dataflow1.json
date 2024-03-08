@@ -23,11 +23,7 @@
 			],
 			"transformations": [],
 			"scriptLines": [
-				"source(output(",
-				"          body as (offset as string, records as (createdTime as string, fields as (Code as string, Name as string), id as string)[]),",
-				"          headers as [string,string]",
-				"     ),",
-				"     allowSchemaDrift: false,",
+				"source(allowSchemaDrift: false,",
 				"     validateSchema: false,",
 				"     httpMethod: 'GET',",
 				"     timeout: 30,",
