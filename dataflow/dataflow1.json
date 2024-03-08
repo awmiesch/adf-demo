@@ -9,7 +9,7 @@
 						"referenceName": "ds_airtable_country_codes",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "countryCodesRestSource"
 				}
 			],
 			"sinks": [],
@@ -21,7 +21,7 @@
 				"     timeout: 30,",
 				"     requestInterval: 0,",
 				"     paginationRules: ['supportRFC5988' -> 'true'],",
-				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'documentPerLine']) ~> source1"
+				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'documentPerLine']) ~> countryCodesRestSource"
 			]
 		}
 	}
