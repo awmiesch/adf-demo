@@ -6,18 +6,9 @@
 		"typeProperties": {
 			"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Basic",
-			"userName": "awmiesch@gmail.com",
-			"password": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "ls_datalake_resources_vault",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "airtable-password"
-			},
+			"authenticationType": "Anonymous",
 			"authHeaders": {
-				"X-API-Key": {
+				"Authorization": {
 					"type": "AzureKeyVaultSecret",
 					"store": {
 						"referenceName": "ls_datalake_resources_vault",
