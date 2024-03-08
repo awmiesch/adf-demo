@@ -38,6 +38,7 @@
 				"     validateSchema: false,",
 				"     format: 'parquet',",
 				"     container: 'datafiles',",
+				"     filePattern:(@concat('country_codes_parquet_', formatDateTime(utcnow(), 'yyyy-MM-dd'))),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> countryCodesParquet"
 			]
