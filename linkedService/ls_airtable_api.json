@@ -14,7 +14,7 @@
 						"referenceName": "ls_datalake_resources_vault",
 						"type": "LinkedServiceReference"
 					},
-					"secretName": "airtable-api-token"
+					"secretName": "airtable-token"
 				}
 			}
 		}
