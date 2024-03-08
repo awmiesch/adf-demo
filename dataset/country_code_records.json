@@ -1,0 +1,19 @@
+{
+	"name": "country_code_records",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "country_codes_table",
+				"container": "datafiles"
+			}
+		},
+		"schema": {}
+	}
+}

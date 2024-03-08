@@ -12,7 +12,19 @@
 					"name": "countryCodesRestSource"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "country_code_records",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "ls_azure_blob_storage",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
 			"transformations": [],
 			"scriptLines": [
 				"source(output(",
@@ -24,7 +36,16 @@
 				"     httpMethod: 'GET',",
 				"     timeout: 30,",
 				"     paginationRules: ['supportRFC5988' -> 'true'],",
-				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'arrayOfDocuments']) ~> countryCodesRestSource"
+				"     responseFormat: ['type' -> 'json', 'documentForm' -> 'arrayOfDocuments']) ~> countryCodesRestSource",
+				"countryCodesRestSource sink(allowSchemaDrift: false,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
+				"     mapColumn(",
+				"          code = body.records[1].fields.Code,",
+				"          name = body.records[1].fields.Name",
+				"     )) ~> sink1"
 			]
 		}
 	}
