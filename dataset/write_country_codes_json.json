@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "\"country_codes_{@utcnow()}\"",
+					"value": "country_codes_@utcnow()",
 					"type": "Expression"
 				},
 				"container": "datafiles"
