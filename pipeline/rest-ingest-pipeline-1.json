@@ -1,5 +1,5 @@
 {
-	"name": "rest-ingest-pipeline",
+	"name": "rest-ingest-pipeline-1",
 	"properties": {
 		"activities": [
 			{
@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"method": "GET",
 					"headers": {
-						"Authorization": "Bearer patnl2lwf5N9rJ09d.bc848e42ec5df057347849feb190e990f47d82824031e0522c060937a333c9da"
+						"Authorization": ""
 					},
 					"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF"
 				}
