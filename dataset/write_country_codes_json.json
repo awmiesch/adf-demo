@@ -5,13 +5,19 @@
 			"referenceName": "ls_azure_blob_storage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"country_codes_file_name": {
+				"type": "String",
+				"defaultValue": "country_codes"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "country_codes_@utcnow()",
+					"value": "@dataset().country_codes_file_name",
 					"type": "Expression"
 				},
 				"container": "datafiles"
