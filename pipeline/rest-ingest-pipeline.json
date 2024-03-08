@@ -16,19 +16,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF",
-					"authentication": {
-						"type": "Basic",
-						"username": "awmiesch@gmail.com",
-						"password": {
-							"type": "AzureKeyVaultSecret",
-							"store": {
-								"referenceName": "ls_datalake_resources_vault",
-								"type": "LinkedServiceReference"
-							},
-							"secretName": "airtable-password"
-						}
-					}
+					"headers": {
+						"Authorization": "Bearer patnl2lwf5N9rJ09d.bc848e42ec5df057347849feb190e990f47d82824031e0522c060937a333c9da"
+					},
+					"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF"
 				}
 			}
 		],
