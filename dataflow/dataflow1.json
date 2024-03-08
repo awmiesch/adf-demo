@@ -18,7 +18,7 @@
 						"referenceName": "ls_azure_blob_storage",
 						"type": "LinkedServiceReference"
 					},
-					"name": "countryCodesParquet"
+					"name": "countryCodesDataBricks"
 				}
 			],
 			"transformations": [],
@@ -40,7 +40,7 @@
 				"     container: 'datafiles',",
 				"     filePattern:'',",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> countryCodesParquet"
+				"     skipDuplicateMapOutputs: true) ~> countryCodesDataBricks"
 			]
 		}
 	}
