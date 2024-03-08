@@ -1,6 +1,5 @@
 {
 	"name": "ls_airtable_api",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "RestService",
@@ -10,10 +9,15 @@
 			"authenticationType": "Anonymous",
 			"authHeaders": {
 				"Authorization": {
-					"type": "SecureString",
-					"value": "**********"
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "ls_datalake_resources_vault",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "airtable-api-token"
 				}
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
