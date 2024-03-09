@@ -34,7 +34,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "airTableBearerToken",
-					"value": "@concat(\"Bearer \", @activity('getAirTableToken').output.value)"
+					"value": "@concat(\"Bearer \", activity('getAirTableToken').output.value)"
 				}
 			}
 		],
