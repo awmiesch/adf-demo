@@ -1,0 +1,121 @@
+{
+	"name": "ingest-reference-data",
+	"properties": {
+		"activities": [
+			{
+				"name": "getAirTableToken",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://datalake-resources-vault.vault.azure.net/secrets/airtable-token/33272238465c46f58fb03737df475bac?api-version=7.0",
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://vault.azure.net"
+					}
+				}
+			},
+			{
+				"name": "setAirTableTokenVariable",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "getAirTableToken",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "airTableBearerToken",
+					"value": "@concat('Bearer ', activity('getAirTableToken').output.value)"
+				}
+			},
+			{
+				"name": "copyRestData",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "setAirTableTokenVariable",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"Authorization": {
+								"value": "@variables('airTableBearerToken')",
+								"type": "Expression"
+							}
+						},
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_airtable_country_codes",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "write_country_codes_json",
+						"type": "DatasetReference",
+						"parameters": {
+							"country_codes_file_name": "country_codes"
+						}
+					}
+				]
+			}
+		],
+		"variables": {
+			"airTableToken": {
+				"type": "String"
+			},
+			"airTableBearerToken": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
