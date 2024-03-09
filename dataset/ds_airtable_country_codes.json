@@ -2,7 +2,7 @@
 	"name": "ds_airtable_country_codes",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_airtable_api",
+			"referenceName": "ls_airtable_country_codes",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
