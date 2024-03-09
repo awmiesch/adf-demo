@@ -76,7 +76,8 @@
 							}
 						},
 						"paginationRules": {
-							"supportRFC5988": "true"
+							"AbsoluteUrl": "$.$.offset",
+							"EndCondition:$.offset": "NonExist"
 						}
 					},
 					"sink": {
