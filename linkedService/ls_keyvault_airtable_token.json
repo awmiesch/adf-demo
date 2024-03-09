@@ -1,0 +1,10 @@
+{
+	"name": "ls_keyvault_airtable_token",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://datalake-resources-vault.vault.azure.net/"
+		}
+	}
+}
