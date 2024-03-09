@@ -71,7 +71,7 @@
 						"requestMethod": "GET",
 						"additionalHeaders": {
 							"Authorization": {
-								"value": "@concat('Bearer ', variables('airTableBearerToken'))",
+								"value": "@variables('airTableBearerToken')",
 								"type": "Expression"
 							}
 						},
@@ -79,11 +79,27 @@
 							"supportRFC5988": "true"
 						}
 					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "PreserveHierarchy"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "ds_fhfa_house_price_indexes",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "fhfa_house_price_indexes_json",
 						"type": "DatasetReference"
 					}
 				]
