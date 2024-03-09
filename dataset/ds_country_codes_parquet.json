@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat('country_codes_parquet', formatDateTime(utcnow(), 'yyyy-MM-dd'))",
+					"value": "@concat('country_codes_', formatDateTime(utcnow(), 'yyyy-MM-dd'), '.parquet')",
 					"type": "Expression"
 				},
 				"container": "datafiles"
