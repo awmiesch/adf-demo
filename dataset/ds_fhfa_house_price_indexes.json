@@ -1,0 +1,12 @@
+{
+	"name": "ds_fhfa_house_price_indexes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_rest_airtable_fhfa_house_price_indexes",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
