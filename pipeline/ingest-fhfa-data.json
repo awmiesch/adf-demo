@@ -89,7 +89,101 @@
 							"type": "JsonWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "['id']"
+								},
+								"sink": {
+									"path": "id"
+								}
+							},
+							{
+								"source": {
+									"path": "['createdTime']"
+								},
+								"sink": {
+									"path": "created_time"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['hpi_type']"
+								},
+								"sink": {
+									"path": "hpi_type"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['hpi_flavor']"
+								},
+								"sink": {
+									"path": "hpi_flavor"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['frequency']"
+								},
+								"sink": {
+									"path": "frequency"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['level']"
+								},
+								"sink": {
+									"path": "level"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['place_name']"
+								},
+								"sink": {
+									"path": "place_name"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['place_id']"
+								},
+								"sink": {
+									"path": "place_id"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['yr']"
+								},
+								"sink": {
+									"path": "year"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['period']"
+								},
+								"sink": {
+									"path": "period"
+								}
+							},
+							{
+								"source": {
+									"path": "['fields']['index_nsa']"
+								},
+								"sink": {
+									"path": "index_nsa"
+								}
+							}
+						],
+						"collectionReference": "$['records']"
+					}
 				},
 				"inputs": [
 					{
