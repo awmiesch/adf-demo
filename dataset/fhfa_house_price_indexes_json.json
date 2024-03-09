@@ -10,6 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('fhfa_house_price_indexes', formatDateTime(utcnow(), 'yyyy-MM-dd'), '.json')",
+					"type": "Expression"
+				},
 				"container": "datafiles"
 			}
 		},
