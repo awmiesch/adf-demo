@@ -22,10 +22,27 @@
 						"resource": "https://vault.azure.net"
 					}
 				}
+			},
+			{
+				"name": "setAirTableTokenVariable",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "airTableBearerToken",
+					"value": "@concat(\"Bearer \", @activity('getAirTableToken').output.value)"
+				}
 			}
 		],
 		"variables": {
 			"airTableToken": {
+				"type": "String"
+			},
+			"airTableBearerToken": {
 				"type": "String"
 			}
 		},
