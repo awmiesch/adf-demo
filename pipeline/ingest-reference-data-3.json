@@ -128,7 +128,7 @@
 						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
+							"recursive": false,
 							"wildcardFileName": "country_codes_*.parquet",
 							"enablePartitionDiscovery": false
 						},
