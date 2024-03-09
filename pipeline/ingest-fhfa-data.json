@@ -1,5 +1,5 @@
 {
-	"name": "test-rest-pipeline-2",
+	"name": "ingest-fhfa-data",
 	"properties": {
 		"activities": [
 			{
@@ -83,7 +83,7 @@
 						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "PreserveHierarchy"
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings"
