@@ -95,7 +95,27 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['id']"
+									"path": "$['records'][0]['id']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['createdTime']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Name']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Code']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['offset']"
 								}
 							}
 						],
@@ -111,10 +131,7 @@
 				"outputs": [
 					{
 						"referenceName": "write_country_codes_json",
-						"type": "DatasetReference",
-						"parameters": {
-							"country_codes_file_name": "country_codes"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
