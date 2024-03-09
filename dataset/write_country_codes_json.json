@@ -17,6 +17,38 @@
 				"container": "datafiles"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"records": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string"
+							},
+							"createdTime": {
+								"type": "string"
+							},
+							"fields": {
+								"type": "object",
+								"properties": {
+									"Name": {
+										"type": "string"
+									},
+									"Code": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"offset": {
+					"type": "string"
+				}
+			}
+		}
 	}
 }
