@@ -76,7 +76,7 @@
 							}
 						},
 						"paginationRules": {
-							"QueryParameters.offset": "$.$.offset"
+							"QueryParameters.offset": "$.offset"
 						}
 					},
 					"sink": {
