@@ -162,7 +162,7 @@
 									"path": "['fields']['yr']"
 								},
 								"sink": {
-									"path": "year"
+									"path": "yr"
 								}
 							},
 							{
@@ -179,6 +179,14 @@
 								},
 								"sink": {
 									"path": "index_nsa"
+								}
+							},
+							{
+								"source": {
+									"path": "$['offset']"
+								},
+								"sink": {
+									"path": "offset"
 								}
 							}
 						],
@@ -197,6 +205,19 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "copyRestData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
 		"variables": {
