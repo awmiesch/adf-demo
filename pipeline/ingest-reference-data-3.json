@@ -95,7 +95,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['records'][0]['id']"
+									"path": "['id']"
 								},
 								"sink": {
 									"path": "id"
@@ -103,7 +103,7 @@
 							},
 							{
 								"source": {
-									"path": "$['records'][0]['createdTime']"
+									"path": "['createdTime']"
 								},
 								"sink": {
 									"path": "created_time"
@@ -111,7 +111,7 @@
 							},
 							{
 								"source": {
-									"path": "$['records'][0]['fields']['Name']"
+									"path": "['fields']['Name']"
 								},
 								"sink": {
 									"path": "name"
@@ -119,14 +119,14 @@
 							},
 							{
 								"source": {
-									"path": "$['records'][0]['fields']['Code']"
+									"path": "['fields']['Code']"
 								},
 								"sink": {
 									"path": "code"
 								}
 							}
 						],
-						"collectionReference": ""
+						"collectionReference": "$['records']"
 					}
 				},
 				"inputs": [
