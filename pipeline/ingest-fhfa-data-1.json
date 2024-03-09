@@ -76,7 +76,7 @@
 							}
 						},
 						"paginationRules": {
-							"AbsoluteUrl": "$.$.offset",
+							"AbsoluteUrl": "$.offset",
 							"EndCondition:$.offset": "NonExist"
 						}
 					},
