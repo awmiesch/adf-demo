@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://datalake-resources-vault.vault.azure.net/secrets/airtable-token/61fc016e9d3044d8b4bcc24187c60ed3?api-version=7.0"
+			"baseUrl": "https://datalake-resources-vault.vault.azure.net/"
 		}
 	}
 }
