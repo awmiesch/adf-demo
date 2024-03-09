@@ -6,17 +6,7 @@
 		"typeProperties": {
 			"url": "https://api.airtable.com/v0/app37qLBTI0RQvW9y/tbl143cu7ktWAeHMF",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Anonymous",
-			"authHeaders": {
-				"Authorization": {
-					"type": "AzureKeyVaultSecret",
-					"store": {
-						"referenceName": "ls_datalake_resources_vault",
-						"type": "LinkedServiceReference"
-					},
-					"secretName": "airtable-token"
-				}
-			}
+			"authenticationType": "Anonymous"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
