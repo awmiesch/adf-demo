@@ -1,0 +1,14 @@
+{
+	"name": "ls_rest_airtable_fhfa_house_price_indexes",
+	"properties": {
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.airtable.com/v0/appUUgv8O8IhILRZo/tblSi8k1w5ztMdntD",
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"Authorization": ""
+			}
+		},
+		"annotations": []
+	}
+}
