@@ -1,0 +1,25 @@
+{
+	"name": "ds_databricks_country_codes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_databricks",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "staging",
+			"table": "country_codes"
+		},
+		"schema": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "code",
+				"type": "string"
+			}
+		]
+	}
+}
