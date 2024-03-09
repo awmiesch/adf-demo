@@ -8,7 +8,14 @@
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous",
 			"authHeaders": {
-				"Authorization": ""
+				"Authorization": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "ls_datalake_resources_vault",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "airtable-token"
+				}
 			}
 		}
 	}
