@@ -80,16 +80,54 @@
 						}
 					},
 					"sink": {
-						"type": "ParquetSink",
+						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "PreserveHierarchy"
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
-							"type": "ParquetWriteSettings"
+							"type": "JsonWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['records'][0]['id']"
+								},
+								"sink": {
+									"path": "id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['createdTime']"
+								},
+								"sink": {
+									"path": "created_time"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Name']"
+								},
+								"sink": {
+									"path": "name"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Code']"
+								},
+								"sink": {
+									"path": "code"
+								}
+							}
+						],
+						"collectionReference": ""
+					}
 				},
 				"inputs": [
 					{
@@ -99,60 +137,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_country_codes_parquet",
-						"type": "DatasetReference"
-					}
-				]
-			},
-			{
-				"name": "copyParquetFile",
-				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "copyRestData",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "ParquetSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": false,
-							"wildcardFileName": "country_codes_*.parquet",
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "ParquetReadSettings"
-						}
-					},
-					"sink": {
-						"type": "AzureDatabricksDeltaLakeSink",
-						"importSettings": {
-							"type": "AzureDatabricksDeltaLakeImportCommand"
-						}
-					},
-					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "ds_country_codes_parquet",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "ds_databricks_country_codes",
+						"referenceName": "ds_country_codes_json",
 						"type": "DatasetReference"
 					}
 				]
