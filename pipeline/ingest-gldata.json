@@ -119,22 +119,6 @@
 							},
 							{
 								"source": {
-									"path": "$['records'][0]['fields']['FiscalYear']"
-								},
-								"sink": {
-									"path": "$['records'][0]['fields']['YtdAmount']"
-								}
-							},
-							{
-								"source": {
-									"path": "['fields']['Segment6']"
-								},
-								"sink": {
-									"path": "$['records'][0]['fields']['Segment6']"
-								}
-							},
-							{
-								"source": {
 									"path": "['fields']['FiscalYear']"
 								},
 								"sink": {
@@ -269,6 +253,29 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "setAirTableTokenVariable",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"enableStaging": false
+				}
 			}
 		],
 		"variables": {
