@@ -1,0 +1,19 @@
+{
+	"name": "ds_planful_gldata_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "planful_gldata.json",
+				"container": "datafiles"
+			}
+		},
+		"schema": {}
+	}
+}
