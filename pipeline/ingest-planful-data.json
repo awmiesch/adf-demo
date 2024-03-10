@@ -83,7 +83,7 @@
 						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "PreserveHierarchy"
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings"
@@ -238,7 +238,7 @@
 								}
 							}
 						],
-						"collectionReference": ""
+						"collectionReference": "$['records']"
 					}
 				},
 				"inputs": [
@@ -293,7 +293,7 @@
 						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "PreserveHierarchy"
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings"
@@ -440,7 +440,7 @@
 								}
 							}
 						],
-						"collectionReference": ""
+						"collectionReference": "$['records']"
 					}
 				},
 				"inputs": [
