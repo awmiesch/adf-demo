@@ -14,6 +14,107 @@
 				"container": "datafiles"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"MemberId": {
+					"type": "integer"
+				},
+				"Code": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"RollupOperator": {
+					"type": "string"
+				},
+				"MemberType": {
+					"type": "string"
+				},
+				"ActiveStatus": {
+					"type": "string"
+				},
+				"Sort": {
+					"type": "integer"
+				},
+				"ParentMemberId": {
+					"type": "integer"
+				},
+				"AccountType": {
+					"type": "string"
+				},
+				"AccountGroup": {
+					"type": "string"
+				},
+				"NormalDataInput": {
+					"type": "string"
+				},
+				"CreditDebit": {
+					"type": "string"
+				},
+				"Variance": {
+					"type": "string"
+				},
+				"TrialBalanceAccount": {
+					"type": "string"
+				},
+				"ReportCategoryName": {
+					"type": "string"
+				},
+				"CurrencyTypeCode": {
+					"type": "string"
+				},
+				"CurrencyTypeName": {
+					"type": "string"
+				},
+				"ParentCode": {
+					"type": "string"
+				},
+				"ParentMemberCode": {
+					"type": "string"
+				},
+				"ParentMemberName": {
+					"type": "string"
+				},
+				"ParentMemberLabel": {
+					"type": "string"
+				},
+				"Attributes": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Name": {
+								"type": "string"
+							},
+							"Value": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"RollupLevels": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Id": {
+								"type": "integer"
+							},
+							"Code": {
+								"type": "string"
+							},
+							"Name": {
+								"type": "string"
+							},
+							"Level": {
+								"type": "integer"
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
