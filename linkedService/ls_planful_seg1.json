@@ -1,0 +1,12 @@
+{
+	"name": "ls_planful_seg1",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.airtable.com/v0/appI2gEMD77ZemM2b/tblsjEMk6vP1DDJo0",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
