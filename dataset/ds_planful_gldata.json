@@ -1,0 +1,12 @@
+{
+	"name": "ds_planful_gldata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_planful_gldata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
