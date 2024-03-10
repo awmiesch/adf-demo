@@ -1,5 +1,5 @@
 {
-	"name": "ingest-gldata",
+	"name": "ingest-planful-data",
 	"properties": {
 		"activities": [
 			{
@@ -83,7 +83,7 @@
 						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "FlattenHierarchy"
+							"copyBehavior": "PreserveHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings"
@@ -238,7 +238,7 @@
 								}
 							}
 						],
-						"collectionReference": "$['records']"
+						"collectionReference": ""
 					}
 				},
 				"inputs": [
@@ -293,7 +293,7 @@
 						"type": "JsonSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "FlattenHierarchy"
+							"copyBehavior": "PreserveHierarchy"
 						},
 						"formatSettings": {
 							"type": "JsonWriteSettings"
@@ -440,7 +440,7 @@
 								}
 							}
 						],
-						"collectionReference": "$['records']"
+						"collectionReference": ""
 					}
 				},
 				"inputs": [
