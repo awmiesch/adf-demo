@@ -1,0 +1,12 @@
+{
+	"name": "ls_planful_gldata",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.airtable.com/v0/appI2gEMD77ZemM2b/tblDKTxpdkaN42um0",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
