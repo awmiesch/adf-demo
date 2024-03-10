@@ -95,7 +95,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "['id']"
+									"path": "$['records'][0]['id']"
 								},
 								"sink": {
 									"path": "$['records'][0]['id']"
@@ -103,7 +103,7 @@
 							},
 							{
 								"source": {
-									"path": "['createdTime']"
+									"path": "$['records'][0]['createdTime']"
 								},
 								"sink": {
 									"path": "$['records'][0]['createdTime']"
@@ -111,114 +111,10 @@
 							},
 							{
 								"source": {
-									"path": "$['records'][0]['fields']['Scenario']"
-								},
-								"sink": {
-									"path": "$['Scenario']"
-								}
-							},
-							{
-								"source": {
-									"path": "['fields']['FiscalYear']"
-								},
-								"sink": {
-									"path": "$['FiscalYear']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment1']"
-								},
-								"sink": {
-									"path": "$['Segment1']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment2']"
-								},
-								"sink": {
-									"path": "$['Segment2']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment3']"
-								},
-								"sink": {
-									"path": "$['Segment3']"
-								}
-							},
-							{
-								"source": {
 									"path": "$['records'][0]['fields']['Segment4']"
 								},
 								"sink": {
-									"path": "$['Segment4']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment5']"
-								},
-								"sink": {
-									"path": "$['Segment5']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment6']"
-								},
-								"sink": {
-									"path": "$['Segment6']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment7']"
-								},
-								"sink": {
-									"path": "$['Segment7']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Segment8']"
-								},
-								"sink": {
-									"path": "$['Segment8']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['Reporting']"
-								},
-								"sink": {
-									"path": "$['Reporting']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['MonthName']"
-								},
-								"sink": {
-									"path": "$['MonthName']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['FiscalMonth']"
-								},
-								"sink": {
-									"path": "$['FiscalMonth']"
-								}
-							},
-							{
-								"source": {
-									"path": "$['records'][0]['fields']['MtdAmount']"
-								},
-								"sink": {
-									"path": "$['MtdAmount']"
+									"path": "$['records'][0]['fields']['Segment4']"
 								}
 							},
 							{
@@ -226,7 +122,23 @@
 									"path": "$['records'][0]['fields']['YtdAmount']"
 								},
 								"sink": {
-									"path": "$['YtdAmount']"
+									"path": "$['records'][0]['fields']['YtdAmount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment6']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment6']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['FiscalYear']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['FiscalYear']"
 								}
 							},
 							{
@@ -234,7 +146,95 @@
 									"path": "$['records'][0]['fields']['QtdAmount']"
 								},
 								"sink": {
-									"path": "$['QtdAmount']"
+									"path": "$['records'][0]['fields']['QtdAmount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MtdAmount']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['MtdAmount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment1']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment1']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Scenario']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Scenario']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment7']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment7']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment8']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment8']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment3']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment3']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment2']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment2']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['FiscalMonth']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['FiscalMonth']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MonthName']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['MonthName']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Reporting']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Reporting']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment5']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Segment5']"
 								}
 							}
 						],
@@ -255,7 +255,7 @@
 				]
 			},
 			{
-				"name": "Copy data1",
+				"name": "get_planful_seg1",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -274,8 +274,187 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"additionalHeaders": {
+							"Authorization": {
+								"value": "@variables('airTableBearerToken')",
+								"type": "Expression"
+							}
+						},
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['records'][0]['id']"
+								},
+								"sink": {
+									"path": "$['records'][0]['id']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['createdTime']"
+								},
+								"sink": {
+									"path": "$['records'][0]['createdTime']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['ActiveStatus']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['ActiveStatus']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Code']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Code']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['ParentMemberId']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['ParentMemberId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['TrialBalanceAccount']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['TrialBalanceAccount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['RollupLevels']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['RollupLevels']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['ParentMemberCode']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['ParentMemberCode']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Sort']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Sort']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['ParentMemberLabel']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['ParentMemberLabel']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MemberId']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['MemberId']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MemberType']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['MemberType']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Variance']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['Variance']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['CreditDebit']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['CreditDebit']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['RollupOperator']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['RollupOperator']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['ParentCode']"
+								},
+								"sink": {
+									"path": "$['records'][0]['fields']['ParentCode']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['offset']"
+								},
+								"sink": {
+									"path": "$['offset']"
+								}
+							}
+						],
+						"collectionReference": "$['records']"
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_planful_seg1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_planful_seg1_json",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"variables": {

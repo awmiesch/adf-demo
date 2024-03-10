@@ -1,0 +1,12 @@
+{
+	"name": "ds_planful_seg1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_planful_seg1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
