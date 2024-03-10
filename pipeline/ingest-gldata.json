@@ -45,7 +45,7 @@
 				}
 			},
 			{
-				"name": "copyRestData",
+				"name": "get_planful_gldata",
 				"type": "Copy",
 				"dependsOn": [
 					{
@@ -98,7 +98,7 @@
 									"path": "['id']"
 								},
 								"sink": {
-									"path": "id"
+									"path": "$['records'][0]['id']"
 								}
 							},
 							{
@@ -106,87 +106,151 @@
 									"path": "['createdTime']"
 								},
 								"sink": {
-									"path": "created_time"
+									"path": "$['records'][0]['createdTime']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['hpi_type']"
+									"path": "$['records'][0]['fields']['Scenario']"
 								},
 								"sink": {
-									"path": "hpi_type"
+									"path": "$['Scenario']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['hpi_flavor']"
+									"path": "$['records'][0]['fields']['FiscalYear']"
 								},
 								"sink": {
-									"path": "hpi_flavor"
+									"path": "$['records'][0]['fields']['YtdAmount']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['frequency']"
+									"path": "['fields']['Segment6']"
 								},
 								"sink": {
-									"path": "frequency"
+									"path": "$['records'][0]['fields']['Segment6']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['level']"
+									"path": "['fields']['FiscalYear']"
 								},
 								"sink": {
-									"path": "level"
+									"path": "$['FiscalYear']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['place_name']"
+									"path": "$['records'][0]['fields']['Segment1']"
 								},
 								"sink": {
-									"path": "place_name"
+									"path": "$['Segment1']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['place_id']"
+									"path": "$['records'][0]['fields']['Segment2']"
 								},
 								"sink": {
-									"path": "place_id"
+									"path": "$['Segment2']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['yr']"
+									"path": "$['records'][0]['fields']['Segment3']"
 								},
 								"sink": {
-									"path": "yr"
+									"path": "$['Segment3']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['period']"
+									"path": "$['records'][0]['fields']['Segment4']"
 								},
 								"sink": {
-									"path": "period"
+									"path": "$['Segment4']"
 								}
 							},
 							{
 								"source": {
-									"path": "['fields']['index_nsa']"
+									"path": "$['records'][0]['fields']['Segment5']"
 								},
 								"sink": {
-									"path": "index_nsa"
+									"path": "$['Segment5']"
 								}
 							},
 							{
 								"source": {
-									"path": "$['offset']"
+									"path": "$['records'][0]['fields']['Segment6']"
 								},
 								"sink": {
-									"path": "offset"
+									"path": "$['Segment6']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment7']"
+								},
+								"sink": {
+									"path": "$['Segment7']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Segment8']"
+								},
+								"sink": {
+									"path": "$['Segment8']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['Reporting']"
+								},
+								"sink": {
+									"path": "$['Reporting']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MonthName']"
+								},
+								"sink": {
+									"path": "$['MonthName']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['FiscalMonth']"
+								},
+								"sink": {
+									"path": "$['FiscalMonth']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['MtdAmount']"
+								},
+								"sink": {
+									"path": "$['MtdAmount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['YtdAmount']"
+								},
+								"sink": {
+									"path": "$['YtdAmount']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['records'][0]['fields']['QtdAmount']"
+								},
+								"sink": {
+									"path": "$['QtdAmount']"
 								}
 							}
 						],
@@ -195,13 +259,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_fhfa_house_price_indexes",
+						"referenceName": "ds_planful_gldata",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "fhfa_house_price_indexes_json",
+						"referenceName": "ds_planful_gldata_json",
 						"type": "DatasetReference"
 					}
 				]
